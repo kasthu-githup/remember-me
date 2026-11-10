@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    border-color: rgba(212, 175, 55, 0.2);
+  }
+
+  body {
+    font-family: 'Inter', 'Plus Jakarta Sans', 'Poppins', system-ui, sans-serif;
+    background-color: #080808;
+    color: #FFFFFF;
+  }
+}
+
+/* Luxury Black & Gold Glassmorphism Cards */
+.gold-glass {
+  background: rgba(25, 25, 25, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.65);
+}
+
+.gold-glass-hover {
+  transition: all 0.25s ease-in-out;
+}
+
+.gold-glass-hover:hover {
+  border-color: rgba(245, 215, 110, 0.45);
+  box-shadow: 0 10px 35px -5px rgba(212, 175, 55, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Primary Gold Button with Black Text */
+.btn-gold {
+  background: linear-gradient(135deg, #F5D76E 0%, #D4AF37 100%);
+  color: #080808;
+  font-weight: 700;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+}
+
+.btn-gold:hover {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F5D76E 100%);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+  transform: translateY(-1px);
+}
+
+.btn-gold:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 8px rgba(212, 175, 55, 0.25);
+}
+
+/* Secondary Dark Gold Outline Button */
+.btn-gold-outline {
+  background: rgba(212, 175, 55, 0.08);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: #F5D76E;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-gold-outline:hover {
+  background: rgba(212, 175, 55, 0.18);
+  border-color: #F5D76E;
+  color: #FFFFFF;
+}
+
+/* Luxury Gold Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.35);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 215, 110, 0.7);
+}
+
+/* Bell wiggle animation */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(15deg); }
+  40% { transform: rotate(-15deg); }
+  60% { transform: rotate(10deg); }
+  80% { transform: rotate(-10deg); }
+}
+
+.animate-wiggle {
+  animation: wiggle 1.2s ease-in-out infinite;
+}
